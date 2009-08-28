@@ -1,0 +1,294 @@
+
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+/*其他連結區塊*/
+.top_bg {
+  background-image: url(images/top.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  height: 32px;
+  width: 750px;
+}
+
+.top_font {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 10pt;
+  line-height: 32px;
+  color: #333333;
+  text-decoration: none;
+  padding-right: 8px;
+}
+
+.top_font a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.top_font a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+.top_font a:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+/*logo映像區塊*/
+.logo_banner {
+  background-image: url(images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  height: 427px;
+  width: 502px;
+}
+
+.right_downbg {
+  background-image: url(images/rightbg.jpg);
+  background-repeat: repeat-y;
+  background-position: left top;
+}
+
+.login_line {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 10pt;
+  color: #666666;
+  text-decoration: none;
+  line-height: 18px;
+  border: 1px solid #9b9b9b;
+  height: 18px;
+  width: 110px;
+}
+
+.login_font {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 10pt;
+  color: #333333;
+  text-decoration: none;
+  padding-right: 5px;
+  line-height: 25px;
+}
+
+.login_font a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.login_font a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+.login_font a:hover {
+  color: #006699;
+  text-decoration: underline;
+}
+
+.login_blue {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 10pt;
+  color: #1a7bc9;
+  text-decoration: none;
+  padding-right: 5px;
+  line-height: 25px;
+}
+
+.login_blue a:link {
+  color: #1a7bc9;
+  text-decoration: none;
+}
+
+.login_blue a:visited{
+  color: #1a7bc9;
+  text-decoration: none;
+}
+
+.login_blue a:hover {
+  color: #1a7bc9;
+  text-decoration: underline;
+}
+
+.login_fontb {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 10pt;
+  color: #333333;
+  text-decoration: none;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.login_fontb a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.login_fontb a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+.login_fontb a:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+input.btn {
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #E6EAEA;
+  border-right-color: #E6EAEA;
+  border-bottom-color: #CAD2D2;
+  border-left-color: #E6EAEA;
+  background-image: url(images/btnBG.jpg);
+  padding-top: 2px;
+  padding-right: 0em;
+  padding-bottom: 0px;
+  padding-left: 0em;
+  margin: 0px;
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 9pt;
+  color: #333333;
+  height: 23px;
+  width: 220px;
+}
+
+input.btn:hover {
+  color:#999999;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #BED7E4;
+  border-right-color: #BED7E4;
+  border-bottom-color: #B4D0E0;
+  border-left-color: #BED7E4;
+  background-image: url(images/btnBG2.jpg);
+  margin: 0px;
+  height: 23px;
+  width: 220px;
+}
+
+
+/*入口網訊息區塊*/
+.main_font {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 12pt;
+  line-height: 20px;
+  color: #797979;
+  text-decoration: none;
+  padding-left: 18px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  padding-top: 10px;
+}
+
+.main_font a:link {
+  line-height: 20px;
+  color: #797979;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+
+.main_font a:visited {
+  line-height: 20px;
+  color: #797979;
+  text-decoration: none;
+}
+
+.main_font a:hover {
+  line-height: 20px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.main_fontb {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 12pt;
+  line-height: 20px;
+  color: #333333;
+  text-decoration: none;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.main_fontb a:link {
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.main_fontb a:visited {
+  line-height: 20px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main_fontb a:hover {
+  line-height: 20px;
+  color: #999999;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*下方頁底*/
+.downbg {
+  line-height: 36px;
+  background-image: url(images/down.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  height: 36px;
+  width: 750px;
+}
+
+.p_font {
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 9pt;
+  color: #666666;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.p_font a:link {
+  color: #666666;
+  text-decoration: none;
+}
+
+.p_font a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+.p_font a:hover{
+  color: #666666;
+  text-decoration: underline;
+}
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }

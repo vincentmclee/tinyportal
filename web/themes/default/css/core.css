@@ -1,0 +1,78 @@
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: "Trebuchet MS", Tahoma, Verdana, Arial, sans-serif;
+  font-size: 1em;
+  background-color: #EEEEEE;
+}
+
+.clear {
+  clear: both;
+}
+
+#head {
+  background: url(../images/head_bg.jpg) repeat;
+  height: 98px;
+}
+
+div.info {
+  height: 64px ;
+  color: #FFFFFF;
+}
+
+div.info img {
+  float: left;
+  margin-left: 50px;
+}
+
+div.info span.navbar {
+  float: right;
+  margin-right: 10px;
+}
+
+#foot {
+  margin-top: 20px;
+  background: url(../images/foot_bg.jpg) repeat;
+  height: 51px;
+}
+
+#foot img {
+  float: left;
+  margin-left: 120px;
+}
+
+#foot p {
+  float: left;
+  font-family: Geneva, Arial, Helvetica, "新細明體";
+  font-size: 9pt;
+  line-height: 20px;
+  color: #797979;
+  padding-top: 5px;
+  padding-left: 3px;
+}
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+.error,
+.notice,
+.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
+
+#notifyblock.error,
+#notifyblock.notice,
+#notifyblock.success {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}

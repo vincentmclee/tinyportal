@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.econcord.portal.model.WidgetInstance" optimistic-lock="version" table="PORTAL_WIDGET_INSTANCES">
+    <id name="id" column="ID" type="long">
+      <generator class="native"/>
+    </id>
+    <version name="version" column="VERSION" type="int"/>
+    <many-to-one cascade="none" class="com.econcord.portal.model.Widget" column="WIDGET_ID" fetch="join" name="widget"/>
+    <property name="columnNo" column="COLUMN_NO" not-null="true" type="int"/>
+    <property name="orderNo" column="ORDER_NO" not-null="true" type="int"/>
+  </class>
+</hibernate-mapping>

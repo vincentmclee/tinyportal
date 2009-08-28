@@ -1,0 +1,62 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		   http://www.springframework.org/schema/tx
+		   http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+  <!-- ldap data source -->
+  <bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+    <property name="url" value="ldap://10.1.168.151:389" />
+    <property name="base" value="" />
+    <property name="userDn" value="cn=Directory Manager" />
+    <property name="password" value="wolfwolf" />
+  </bean>
+
+  <bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+    <constructor-arg ref="contextSource" />
+  </bean>
+
+  <!-- database data source -->
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+    <property name="url" value="jdbc:mysql://10.1.168.151:3306/portal?useUnicode=true&amp;characterEncoding=UTF-8" />
+	<property name="username" value="root" />
+	<property name="password" value="admin" />
+	<property name="initialSize" value="3" />
+    <property name="maxActive" value="10" />
+    <property name="maxIdle" value="2" />
+	<property name="removeAbandoned" value="true" />
+  </bean>
+
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean" destroy-method="destroy">
+	<property name="dataSource" ref="dataSource" />
+	<property name="mappingResources">
+	  <list>
+		<value>com/econcord/portal/model/Member.hbm.xml</value>
+		<value>com/econcord/portal/model/TabPage.hbm.xml</value>
+		<value>com/econcord/portal/model/Widget.hbm.xml</value>
+		<value>com/econcord/portal/model/WidgetInstance.hbm.xml</value>
+	  </list>
+	</property>
+	<property name="hibernateProperties">
+	  <props>
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+		<prop key="hibernate.max_fetch_depth">3</prop>
+		<prop key="hibernate.bytecode.use_reflection_optimizer">true</prop>
+		<prop key="hibernate.hbm2ddl.auto">update</prop>
+		<prop key="hibernate.show_sql">true</prop>
+		<prop key="hibernate.format_sql">true</prop>
+		<prop key="hibernate.use_sql_comments">true</prop>
+	  </props>
+	</property>
+  </bean>
+
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+
+  <tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>

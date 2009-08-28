@@ -1,0 +1,41 @@
+/* JS-Enabled CSS */
+.widget-head a.remove  {
+  float: right;
+  display: inline;
+  background: url(../images/delete.png) no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  margin: 8px 4px 8px 0;
+  text-indent: -9999em;
+  outline: none;
+}
+
+.widget-head a.collapse  {
+  float: right;
+  display: inline;
+  background: url(../images/collapse.gif) no-repeat 0 0;
+  width: 14px;
+  height: 16px;
+  text-indent: -9999em;
+  margin: 6px 4px 8px 2px;
+  outline: none;
+}
+
+.widget-head a.uncollapse {
+  float: right;
+  display: inline;
+  background: url(../images/uncollapse.gif) no-repeat 0 0;
+  width: 14px;
+  height: 16px;
+  text-indent: -9999em;
+  margin: 6px 4px 8px 2px;
+  outline: none;
+}
+
+.widget-placeholder { 
+  border: 2px dashed red;
+}
+
+#column1 .widget-placeholder { margin: 30px 35px 0 25px; }
+#column2 .widget-placeholder { margin: 30px 20px 0 20px; }
+#column3 .widget-placeholder { margin: 30px 25px 0 35px; }

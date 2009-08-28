@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="memberService" class="com.econcord.portal.service.MemberServiceImpl">
+	<property name="memberDao" ref="memberDao" />
+  </bean>
+
+  <bean id="tabPageService" class="com.econcord.portal.service.TabPageServiceImpl">
+    <property name="tabPageDao" ref="tabPageDao" />
+  </bean>
+
+  <bean id="widgetService" class="com.econcord.portal.service.WidgetServiceImpl">
+	<property name="widgetDao" ref="widgetDao" />
+  </bean>
+
+  <bean id="widgetInstanceService" class="com.econcord.portal.service.WidgetInstanceServiceImpl">
+	<property name="widgetInstanceDao" ref="widgetInstanceDao" />
+  </bean>
+
+  <!-- 登入認證管理 -->
+  <bean id="authenticationManager" class="com.econcord.portal.security.PortalDefaultAuthenticationManager">
+	<property name="userRootDn" value="ou=People, c=tw" />
+	<property name="ldapTemplate" ref="ldapTemplate" />
+	<property name="memberService" ref="memberService" />
+  </bean>
+
+  <!-- 設定主題管理 -->
+  <bean id="themeManager" class="com.econcord.portal.theme.ThemeManager">
+    <property name="themesRoot" value="/themes" />
+	<property name="themes">
+	  <map>
+		<entry>
+		  <key>
+			<value>default</value>
+		  </key>
+		  <bean class="com.econcord.portal.theme.Theme">
+			<property name="id" value="default" />
+			<property name="name" value="預設" />
+			<property name="layoutSource" value="layout.jsp" />
+		  </bean>
+		</entry>
+	  </map>
+	</property>
+  </bean>
+  
+</beans>

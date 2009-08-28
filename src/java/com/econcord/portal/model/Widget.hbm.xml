@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.econcord.portal.model.Widget" optimistic-lock="version" table="PORTAL_WIDGET">
+    <id name="id" column="ID" type="long">
+      <generator class="native"/>
+    </id>
+    <version name="version" column="VERSION" type="int"/>
+    <property name="uniqueName" column="UNIQUE_NAME" not-null="true" type="string" unique="true"/>
+    <property name="title" column="TITLE" not-null="true" type="string"/>
+    <property name="className" column="CLASS_NAME" not-null="true" type="string" unique="true"/>
+    <property name="description" column="DESCRIPTION" type="text"/>
+    <property name="allowRole" column="ALLOW_ROLE" type="string"/>
+    <property name="icon" column="ICON" type="string"/>
+  </class>
+</hibernate-mapping>

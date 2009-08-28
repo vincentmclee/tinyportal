@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="" />
+	<property name="suffix" value=".jsp" />
+  </bean>
+
+  <bean name="/test/TestController.do" class="eip.web.controllers.TestController">
+	<property name="viewPage" value="/test/test1" />
+  </bean>
+
+  <bean name="/test/Test2Controller.do" class="eip.web.controllers.Test2Controller">
+	<property name="viewPage" value="/test/test2" />
+  </bean>
+
+  <bean name="/test/Test3Controller.do" class="eip.web.controllers.Test3Controller" />
+
+</beans>

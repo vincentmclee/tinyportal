@@ -1,0 +1,49 @@
+div.tabBlock {
+  clear: both;
+  padding-top: 1px;
+}
+
+div.tabs {
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+  line-height: normal;
+  overflow: hidden;
+}
+
+div.tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.tabs ul li {
+  float: left;
+  height: 28px;
+  margin: 0 2px;
+  padding: 0;
+  font-size: 1em;
+  border-top: 1px solid #888888;
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
+  background-color: #CCCC99;
+  overflow: hidden; 
+}
+
+div.tabs ul li a {
+  display: block;
+  padding: 5px 3px 5px 3px;
+  color: #666633;
+  text-decoration: none;
+}
+
+div.tabs ul li.active a {
+  color: #666633;
+  background: orange;
+}
+
+div.tabs ul li a:hover {
+  color: #FFFFFF;
+  background: orange;
+}

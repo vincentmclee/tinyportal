@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.econcord.portal.model.TabPage" optimistic-lock="version" table="PORTAL_TABPAGE">
+    <id name="id" column="ID" type="long">
+      <generator class="native"/>
+    </id>
+    <version name="version" column="VERSION" type="int"/>
+    <property name="uniqueName" column="UNIQUE_NAME" not-null="true" type="string" unique="true"/>
+    <property name="widgetPage" column="WIDGET_PAGE" not-null="true" type="yes_no"/>
+    <property name="title" column="TITLE" not-null="true" type="string"/>
+    <property name="pageUri" column="PAGE_URI" type="string"/>
+    <property name="allowRole" column="ALLOW_ROLE" type="string"/>
+    <property name="orderNo" column="ORDER_NO" not-null="true" type="int" unique="true"/>
+  </class>
+</hibernate-mapping>

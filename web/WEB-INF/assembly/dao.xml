@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+			 
+  <bean id="memberDao" class="com.econcord.portal.model.MemberDao">
+	<property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+
+  <bean id="tabPageDao" class="com.econcord.portal.model.TabPageDao">
+	<property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+
+  <bean id="widgetDao" class="com.econcord.portal.model.WidgetDao">
+	<property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+
+  <bean id="widgetInstanceDao" class="com.econcord.portal.model.WidgetInstanceDao">
+	<property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+  
+</beans>
